@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../fontawesome//css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/style-detail-product.css"
+    />
+
+    <title>Pita Putar</title>
+  </head>
+  <body>
+    <!--Awal NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../Sources/assets/logo.png"
+            alt=""
+            width="50"
+            height="50"
+            class="me-2"
+          />
+          <strong>PitaPutar</strong>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="d-flex ms-auto my-4 my-lg-0">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Cari barang anda"
+              aria-label="Search"
+            />
+            <button class="btn btn-light" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="guest_book.php">Buku Tamu</a>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onclick="gotoLogin()"
+              >
+                Masuk
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Akhir NavBar-->
+
+    <!--Awal BreadCrumb-->
+    <div class="container">
+      <nav aria-label="breadcrumb" style="background-color: #fff" class="mt-3">
+        <ol class="breadcrumb p-3">
+          <li class="breadcrumb-item">
+            <a class="text-decoration-none" href="home.html">Beranda</a>
+            <!-- </li>
+          <li class="breadcrumb-item">
+            <a class="text-decoration-none" href="#">kategori</a>
+          </li> -->
+          </li>
+
+          <li class="breadcrumb-item active" aria-current="page">Produk</li>
+        </ol>
+      </nav>
+    </div>
+    <!--Akhir BreadCrumb-->
+
+    <!--Detail Produk-->
+    <div class="container">
+      <div class="row row-product">
+        <div class="col-lg-5">
+          <figure class="figure">
+            <img
+              id="img-product"
+              src="../Sources/assets/produk/produk4.jpg"
+              class="figure-img img-fluid"
+              style="border-radius: 5px; width: 450px"
+            />
+            <figcaption class="figure d-flex justify-content-evenly">
+              <a href="#">
+                <img
+                  id="img-product1"
+                  src="../Sources/assets/produk/produk4.jpg"
+                  class="figure-img img-fluid"
+                  style="border-radius: 5px; width: 70px"
+                />
+              </a>
+              <a href="#">
+                <img
+                  id="img-product2"
+                  src="../Sources/assets/produk/produk4.jpg"
+                  class="figure-img img-fluid"
+                  style="border-radius: 5px; width: 70px"
+                />
+              </a>
+              <a href="#">
+                <img
+                  id="img-product3"
+                  src="../Sources/assets/produk/produk4.jpg"
+                  class="figure-img img-fluid"
+                  style="border-radius: 5px; width: 70px"
+                />
+              </a>
+              <a href="#">
+                <img
+                  id="img-product4"
+                  src="../Sources/assets/produk/produk4.jpg"
+                  class="figure-img img-fluid"
+                  style="border-radius: 5px; width: 70px"
+                />
+              </a>
+              <a href="#">
+                <img
+                  id="img-product5"
+                  src="../Sources/assets/produk/produk4.jpg"
+                  class="figure-img img-fluid"
+                  style="border-radius: 5px; width: 70px"
+                />
+              </a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-lg-7">
+          <h4 id="name-product">Title</h4>
+          <div class="garis-nama"></div>
+          <h3 id="price-product" class="text-muted mb-3">Rp. -</h3>
+          <button type="button" class="btn btn-dark btn-sm" onclick="minQty()">
+            <i class="fas fa-minus"></i>
+          </button>
+          <span class="mx-2" id="qty-product">1</span>
+          <button
+            type="button"
+            class="btn btn-warning btn-sm"
+            onclick="plusQty()"
+          >
+            <i class="fas fa-plus text-white"></i>
+          </button>
+          <span class="mx-2">sisa 25 buah</span>
+
+          <div class="btn-prorduct mt-5">
+            <a href="#" class="btn-dark text-white btn-lg me-2 btn-custom">
+              <i class="fas fa-shopping-cart fs-6 me-2"></i> Masukan
+              Keranjang</a
+            >
+            <a href="#" class="btn-warning text-white btn-lg btn-custom"
+              >Beli Sekarang</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!--Descriptipn & review-->
+      <div class="row row-product pt-5">
+        <div class="col">
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button
+                class="nav-link active"
+                id="nav-deskripsi-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-deskripsi"
+                type="button"
+                role="tab"
+                aria-controls="nav-deskripsi"
+                aria-selected="true"
+              >
+                Deskripsi
+              </button>
+              <button
+                class="nav-link"
+                id="nav-review-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-review"
+                type="button"
+                role="tab"
+                aria-controls="nav-review"
+                aria-selected="false"
+              >
+                Review
+              </button>
+            </div>
+          </nav>
+          <div class="tab-content p-3" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active deskripsi"
+              id="nav-deskripsi"
+              role="tabpanel"
+              aria-labelledby="nav-deskripsi-tab"
+            >
+              <p id="desc-product">detail produk</p>
+            </div>
+            <div
+              class="tab-pane fade review"
+              id="nav-review"
+              role="tabpanel"
+              aria-labelledby="nav-review-tab"
+            >
+              <div class="row pt-2">
+                <div class="col-3 col-md-1">
+                  <img
+                    src="../Sources/assets/profil/1.png"
+                    alt=""
+                    class="rounded-circle review-img"
+                  />
+                </div>
+                <div class="col">
+                  <h5 class="review-name">Bella</h5>
+                  <p class="rerview-desc">Produk sesuai, seller ramah</p>
+                </div>
+              </div>
+
+              <div class="row pt-2">
+                <div class="col-3 col-md-1">
+                  <img
+                    src="../Sources/assets/profil/2.png"
+                    alt=""
+                    class="rounded-circle review-img"
+                  />
+                </div>
+                <div class="col">
+                  <h5 class="review-name">Ladu singh</h5>
+                  <p class="rerview-desc">Produk sesuai, seller ramah</p>
+                </div>
+              </div>
+
+              <div class="row pt-2">
+                <div class="col-3 col-md-1">
+                  <img
+                    src="../Sources/assets/profil/3.png"
+                    alt=""
+                    class="rounded-circle review-img"
+                  />
+                </div>
+                <div class="col">
+                  <h5 class="review-name">Rani</h5>
+                  <p class="rerview-desc">Produk sesuai, seller ramah</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Descriptipn & review-->
+    </div>
+    <!--Akhie Detail Produk-->
+
+    <!--Awal foooter-->
+    <footer class="bg-light p-5 mt-5">
+      <div class="container">
+        <div class="row mt-2">
+          <div class="col-md-6 text-md-start text-center pt-2 pb-2">
+            <a href="#" class="text-decoration-none">
+              <img
+                src="../Sources/assets/logo.png"
+                style="width: 40px"
+                alt=""
+              />
+            </a>
+            <span class="ps-1"
+              >Copyright @2022 | Created with
+              <i class="fas fa-heart text-danger"></i> by
+              <a
+                href="https://twitter.com/qiiiiisixx"
+                class="text-decoration-none text-dark fw-bold"
+                >qiiiiisixx</a
+              ></span
+            >
+          </div>
+
+          <div class="col-md-6 text-md-end text-center pt-2 pb-2">
+            <a href="#" class="text-decoration-none">
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/facebook.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a href="#" class="text-decoration-none">
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/instagram.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a href="#" class="text-decoration-none">
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/twitter.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a href="#" class="text-decoration-none">
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/linkedin.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Akhir Footer-->
+
+    <script>
+      function gotoLogin() {
+        window.location.href = "login.html";
+      }
+
+      function minQty() {
+        var current_qty = document.getElementById("qty-product").innerHTML;
+        var new_qty = parseInt(current_qty);
+
+        if (new_qty > 0) {
+          new_qty -= 1;
+          document.getElementById("qty-product").innerHTML = new_qty;
+        } else {
+          alert("minimal pembelian 1 pcs");
+        }
+      }
+
+      function plusQty() {
+        var current_qty = document.getElementById("qty-product").innerHTML;
+        var new_qty = parseInt(current_qty);
+        new_qty += 1;
+        document.getElementById("qty-product").innerHTML = new_qty;
+      }
+    </script>
+
+    <script>
+      var id_product = sessionStorage.getItem("id-product");
+
+      if (id_product == 1) {
+        console.log("1");
+
+        // SetName
+        document.getElementById("name-product").innerHTML =
+          "CD The Beatles One";
+        // SetPrice
+        document.getElementById("price-product").innerHTML = "RP. 250.000";
+        // SetDesc
+        document.getElementById("desc-product").innerHTML =
+          "1 is a compilation album by the English rock band the Beatles, originally released on 13 November 2000. The album features virtually every number-one single the band achieved in the United Kingdom or United States from 1962 to 1970.Artist: The Beatles Studio: EMI, Apple, Olympic and Trident Studios, London; Pathé Marconi Studios, Paris Genre: Rock; pop";
+
+        //setImage
+        document.getElementById("img-product").src =
+          "../Sources/assets/produk/pd-1.jpg";
+        document.getElementById("img-product1").src =
+          "../Sources/assets/produk/pd-1.jpg";
+        document.getElementById("img-product2").src =
+          "../Sources/assets/produk/pd-1.jpg";
+        document.getElementById("img-product3").src =
+          "../Sources/assets/produk/pd-1.jpg";
+        document.getElementById("img-product4").src =
+          "../Sources/assets/produk/pd-1.jpg";
+        document.getElementById("img-product5").src =
+          "../Sources/assets/produk/pd-1.jpg";
+      } else if (id_product == 2) {
+        console.log("2");
+
+        // SetName
+        document.getElementById("name-product").innerHTML =
+          "Kaset Oasis (What's the Story) Morning Glory?";
+        // SetPrice
+        document.getElementById("price-product").innerHTML = "RP. 180.000";
+        // SetDesc
+        document.getElementById("desc-product").innerHTML =
+          "(What's the Story) Morning Glory? is the second studio album by English rock band Oasis. Released on 2 October 1995 by Creation Records, it was produced by Owen Morris and the group's guitarist and main songwriter Noel Gallagher. Producer: Owen Morris, Noel Gallagher ; Genre: Rock, Britpop ; Released: 4 November 1996 ; Recorded: 1995";
+
+        //setImage
+        document.getElementById("img-product").src =
+          "../Sources/assets/produk/pd-2.jpg";
+        document.getElementById("img-product1").src =
+          "../Sources/assets/produk/pd-2.jpg";
+        document.getElementById("img-product2").src =
+          "../Sources/assets/produk/pd-2.jpg";
+        document.getElementById("img-product3").src =
+          "../Sources/assets/produk/pd-2.jpg";
+        document.getElementById("img-product4").src =
+          "../Sources/assets/produk/pd-2.jpg";
+        document.getElementById("img-product5").src =
+          "../Sources/assets/produk/pd-2.jpg";
+      } else if (id_product == 3) {
+        console.log("3");
+
+        // SetName
+        document.getElementById("name-product").innerHTML =
+          "Kaset God Bless Semut Hitam";
+        // SetPrice
+        document.getElementById("price-product").innerHTML = "RP. 120.000";
+        // SetDesc
+        document.getElementById("desc-product").innerHTML =
+          "Semut Hitam adalah album ketiga dari grup musik God Bless yang dirilis pada tahun 1988. Album ini dirilis dengan jarak waktu yang cukup lama dari album terakhir yang berjudul Cermin (1980). Dirilis	27 Maret 1988 ; Direkam	:1987-1988 ; Genre	:Rock ; Durasi	:45:33 ; Label	:Logiss Record ; Produser:Log Zhelebour";
+
+        //setImage
+        document.getElementById("img-product").src =
+          "../Sources/assets/produk/pd-3.jpg";
+        document.getElementById("img-product1").src =
+          "../Sources/assets/produk/pd-3.jpg";
+        document.getElementById("img-product2").src =
+          "../Sources/assets/produk/pd-3.jpg";
+        document.getElementById("img-product3").src =
+          "../Sources/assets/produk/pd-3.jpg";
+        document.getElementById("img-product4").src =
+          "../Sources/assets/produk/pd-3.jpg";
+        document.getElementById("img-product5").src =
+          "../Sources/assets/produk/pd-3.jpg";
+      } else if (id_product == 4) {
+        console.log("4");
+
+        // SetName
+        document.getElementById("name-product").innerHTML =
+          "Kaset Blur: The Best Of";
+        // SetPrice
+        document.getElementById("price-product").innerHTML = "RP. 220.000";
+        // SetDesc
+        document.getElementById("desc-product").innerHTML =
+          "Blur: The Best Of is a greatest hits compilation album by English Britpop band Blur, first released in late 2000 and is the final Blur album by Food Records. It was released on CD, cassette tape, MiniDisc, double 12 vinyl record, DVD and VHS. Released :30 October 2000 ; Recorded : 1990–2000 ; Genre : Britpop, alternative rock, indie rock ; Label : Food/Virgin/Parlophone ; Producer : Stephen Street, William Orbit, Steve Lovell, Steve Power, Ben Hillier";
+
+        //setImage
+        document.getElementById("img-product").src =
+          "../Sources/assets/produk/pd-4.jpg";
+        document.getElementById("img-product1").src =
+          "../Sources/assets/produk/pd-4.jpg";
+        document.getElementById("img-product2").src =
+          "../Sources/assets/produk/pd-4.jpg";
+        document.getElementById("img-product3").src =
+          "../Sources/assets/produk/pd-4.jpg";
+        document.getElementById("img-product4").src =
+          "../Sources/assets/produk/pd-4.jpg";
+        document.getElementById("img-product5").src =
+          "../Sources/assets/produk/pd-4.jpg";
+      } else if (id_product == 5) {
+        console.log("5");
+
+        // SetName
+        document.getElementById("name-product").innerHTML =
+          "Kaset The Beatles Anthology 2";
+        // SetPrice
+        document.getElementById("price-product").innerHTML = "RP. 80.000";
+        // SetDesc
+        document.getElementById("desc-product").innerHTML =
+          "Anthology 2 is a compilation album by the Beatles, released on 18 March 1996 by Apple Records as part of The Beatles Anthology series. It features rarities, outtakes and live performances from the 1965 sessions for Help! to the sessions just prior to their trip to India in February 1968. Artist: The Beatles ; Release date: March 18, 1996 ; Label: Apple (CDP 7243 8 34448 2), Capitol ; Length: 127:54 ; Genre: Rock, pop";
+
+        //setImage
+        document.getElementById("img-product").src =
+          "../Sources/assets/produk/pd-5.jpg";
+        document.getElementById("img-product1").src =
+          "../Sources/assets/produk/pd-5.jpg";
+        document.getElementById("img-product2").src =
+          "../Sources/assets/produk/pd-5.jpg";
+        document.getElementById("img-product3").src =
+          "../Sources/assets/produk/pd-5.jpg";
+        document.getElementById("img-product4").src =
+          "../Sources/assets/produk/pd-5.jpg";
+        document.getElementById("img-product5").src =
+          "../Sources/assets/produk/pd-5.jpg";
+      } else if (id_product == 6) {
+        console.log("6");
+
+        // SetName
+        document.getElementById("name-product").innerHTML =
+          "Kaset Weezer Pinkerton";
+        // SetPrice
+        document.getElementById("price-product").innerHTML = "RP. 100.000";
+        // SetDesc
+        document.getElementById("desc-product").innerHTML =
+          "Pinkerton is the second studio album by American rock band Weezer, released on September 24, 1996, by DGC Records. After abandoning plans for a rock opera entitled Songs from the Black Hole, Weezer recorded the album between songwriter Rivers Cuomo's terms at Harvard University, where he wrote most of the songs. Artist: Weezer ; Release date: September 24, 1996 ; Label: DGC ; Length: 34:36 ; Genre: Alternative rock; power pop; emo; pop punk; lo-fi";
+
+        //setImage
+        document.getElementById("img-product").src =
+          "../Sources/assets/produk/pd-6.jpg";
+        document.getElementById("img-product1").src =
+          "../Sources/assets/produk/pd-6.jpg";
+        document.getElementById("img-product2").src =
+          "../Sources/assets/produk/pd-6.jpg";
+        document.getElementById("img-product3").src =
+          "../Sources/assets/produk/pd-6.jpg";
+        document.getElementById("img-product4").src =
+          "../Sources/assets/produk/pd-6.jpg";
+        document.getElementById("img-product5").src =
+          "../Sources/assets/produk/pd-6.jpg";
+      } else if (id_product == 7) {
+        console.log("7");
+
+        // SetName
+        document.getElementById("name-product").innerHTML =
+          "CD BTS Lights / Boy With Luv";
+        // SetPrice
+        document.getElementById("price-product").innerHTML = "RP. 230.000";
+        // SetDesc
+        document.getElementById("desc-product").innerHTML =
+          "Lights / Boy With Luv Album by BTS. Artist: BTS ; Release date: July 3, 2019 ; Label: Universal Music";
+
+        //setImage
+        document.getElementById("img-product").src =
+          "../Sources/assets/produk/pd-7.jpg";
+        document.getElementById("img-product1").src =
+          "../Sources/assets/produk/pd-7.jpg";
+        document.getElementById("img-product2").src =
+          "../Sources/assets/produk/pd-7.jpg";
+        document.getElementById("img-product3").src =
+          "../Sources/assets/produk/pd-7.jpg";
+        document.getElementById("img-product4").src =
+          "../Sources/assets/produk/pd-7.jpg";
+        document.getElementById("img-product5").src =
+          "../Sources/assets/produk/pd-7.jpg";
+      } else if (id_product == 8) {
+        console.log("8");
+
+        // SetName
+        document.getElementById("name-product").innerHTML =
+          "Kaset Oasis Heathen Chemistry";
+        // SetPrice
+        document.getElementById("price-product").innerHTML = "RP. 180.000";
+        // SetDesc
+        document.getElementById("desc-product").innerHTML =
+          "Heathen Chemistry is the fifth studio album by English rock band Oasis. It was released on 1 July 2002 by Big Brother Recordings. Artist: Oasis ; Release date: July 1, 2002 ; Label: SONY MUSIC ; Studio: Wheeler End, Buckinghamshire and Olympic, London ; Genres: Rock, Britpop, Alternative rock, Indie rock, Pop rock ; Nominations: NME Award for Best Album";
+
+        //setImage
+        document.getElementById("img-product").src =
+          "../Sources/assets/produk/pd-8.jpg";
+        document.getElementById("img-product1").src =
+          "../Sources/assets/produk/pd-8.jpg";
+        document.getElementById("img-product2").src =
+          "../Sources/assets/produk/pd-8.jpg";
+        document.getElementById("img-product3").src =
+          "../Sources/assets/produk/pd-8.jpg";
+        document.getElementById("img-product4").src =
+          "../Sources/assets/produk/pd-8.jpg";
+        document.getElementById("img-product5").src =
+          "../Sources/assets/produk/pd-8.jpg";
+      } else if (id_product == 9) {
+        console.log("9");
+
+        // SetName
+        document.getElementById("name-product").innerHTML =
+          "CD Nada Surf High/Low";
+        // SetPrice
+        document.getElementById("price-product").innerHTML = "RP. 200.000";
+        // SetDesc
+        document.getElementById("desc-product").innerHTML =
+          "High/Low is the debut studio album by alternative rock band Nada Surf, released on June 18, 1996. The album is best known for its hit single Popular. Artist: Nada Surf ; Release date: June 18, 1996 ; Producer: Ric Ocasek ; Genres: Rock, Alternative rock, Indie rock, Post-grunge";
+
+        //setImage
+        document.getElementById("img-product").src =
+          "../Sources/assets/produk/pd-9.jpg";
+        document.getElementById("img-product1").src =
+          "../Sources/assets/produk/pd-9.jpg";
+        document.getElementById("img-product2").src =
+          "../Sources/assets/produk/pd-9.jpg";
+        document.getElementById("img-product3").src =
+          "../Sources/assets/produk/pd-9.jpg";
+        document.getElementById("img-product4").src =
+          "../Sources/assets/produk/pd-9.jpg";
+        document.getElementById("img-product5").src =
+          "../Sources/assets/produk/pd-9.jpg";
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

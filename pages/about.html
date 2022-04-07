@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../fontawesome//css/all.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/style-abouts.css" />
+
+    <title>Pita Putar</title>
+  </head>
+  <body>
+    <!--Awal NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../Sources/assets/logo.png"
+            alt=""
+            width="50"
+            height="50"
+            class="me-2"
+          />
+          <strong>PitaPutar</strong>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="d-flex ms-auto my-4 my-lg-0">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Cari barang anda"
+              aria-label="Search"
+            />
+            <button class="btn btn-light" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Tentang</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="guest_book.php">Buku Tamu</a>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onclick="gotoLogin()"
+              >
+                Masuk
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Akhir NavBar-->
+
+    <!--Awal About-->
+
+    <div class="container mt-5">
+      <div class="container">
+        <div
+          class="title-categori"
+          style="background-color: white 0%; padding: 5px 10px"
+        >
+          <h5 class="text-center" style="margin-top: 5px">
+            <hr />
+            Tentang
+            <hr />
+          </h5>
+        </div>
+      </div>
+
+      <div class="container mt-2">
+        <div class="text-center">
+          <img
+            src="../Sources/assets/logo.png."
+            class="img-fluid img-logo"
+            alt="..."
+            style="width: 200px"
+          />
+
+          <h4 class="text-title">PitaPutar</h4>
+
+          <p>
+            PitaPutar adalah toko yang menjual rilisan fisik resmi dan terjamin
+            originalitasnya. PitaPutar mengajal konsumen untuk menghargai karya
+            seorang dengan menikmati karya secara legal menggunakan rilisan
+            fisik originalnyaDengan menggunakan rilisan fisik original bukan
+            hanya untuk menghargai senimannya tetapi kita juga dapat merasakan
+            sensasi yang berbeda dan mendapatkan kepuasan tersendiri setelah
+            mendengarkannya.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Akhir About-->
+
+    <!--Awal foooter-->
+    <footer class="bg-light p-5 mt-5">
+      <div class="container">
+        <div class="row mt-2">
+          <div class="col-md-6 text-md-start text-center pt-2 pb-2">
+            <a href="#" class="text-decoration-none">
+              <img
+                src="../Sources/assets/logo.png"
+                style="width: 40px"
+                alt=""
+              />
+            </a>
+            <span class="ps-1"
+              >Copyright @2022 | Created with
+              <i class="fas fa-heart text-danger"></i> by
+              <a
+                href="https://twitter.com/qiiiiisixx"
+                class="text-decoration-none text-dark fw-bold"
+                >qiiiiisixx</a
+              ></span
+            >
+          </div>
+
+          <div class="col-md-6 text-md-end text-center pt-2 pb-2">
+            <a
+              href="https://web.facebook.com/rifqitriginandri?_rdc=1&_rdr"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/facebook.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/rifqitriginandri/"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/instagram.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://mobile.twitter.com/qiiiiisixx"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/twitter.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://id.linkedin.com/in/rifqitriginandri"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/linkedin.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Akhir Footer-->
+
+    <script type="text/javascript">
+      function gotoLogin() {
+        window.location.href = "login.html";
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

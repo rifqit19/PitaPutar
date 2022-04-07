@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../fontawesome//css/all.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/style-product.css" />
+
+    <title>Pita Putar</title>
+  </head>
+  <body>
+    <!--Awal NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../Sources/assets/logo.png"
+            alt=""
+            width="50"
+            height="50"
+            class="me-2"
+          />
+          <strong>PitaPutar</strong>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="d-flex ms-auto my-4 my-lg-0">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Cari barang anda"
+              aria-label="Search"
+            />
+            <button class="btn btn-light" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="guest_book.php">Buku Tamu</a>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onclick="gotoLogin()"
+              >
+                Masuk
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Akhir NavBar-->
+
+    <!--Awal Produk-->
+    <div class="container mt-5">
+      <div
+        class="title-categori"
+        style="background-color: white 0%; padding: 5px 10px"
+      >
+        <h5 class="text-center" style="margin-top: 5px">
+          <hr />
+          SEMUA PRODUK
+          <hr />
+        </h5>
+      </div>
+      <div class="ro w">
+        <div
+          id="1"
+          class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2"
+          onclick="gotoDetail(this.id)"
+        >
+          <div class="card text-center">
+            <img
+              src="../Sources/assets/produk/pd-1.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h6 class="card-title">CD The Beatles One</h6>
+              <!-- <div class="icon-star" style="color: orange">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div> -->
+              <p class="card-text desc-product">
+                1 is a compilation album by the English rock band the Beatles,
+                originally released on 13 November 2000.
+              </p>
+              <p class="card-text">Rp. 250.000</p>
+              <a href="#" class="btn btn-dark d-grid">beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="2"
+          class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2"
+          onclick="gotoDetail(this.id)"
+        >
+          <div class="card text-center">
+            <img
+              src="../Sources/assets/produk/pd-2.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h6 class="card-title">
+                Kaset Oasis (What's the Story) Morning Glory?
+              </h6>
+              <p class="card-text">
+                (What's the Story) Morning Glory? is the second studio album by
+                English rock band Oasis.
+              </p>
+              <p class="card-text">Rp. 180.000</p>
+              <a href="#" class="btn btn-dark d-grid">beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="3"
+          class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2"
+          onclick="gotoDetail(this.id)"
+        >
+          <div class="card text-center">
+            <img
+              src="../Sources/assets/produk/pd-3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h6 class="card-title">Kaset God Bless Semut Hitam</h6>
+              <p class="card-text">
+                Semut Hitam adalah album ketiga dari grup musik God Bless yang
+                dirilis pada tahun 1988.
+              </p>
+              <p class="card-text">Rp. 120.000</p>
+              <a href="#" class="btn btn-dark d-grid">beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="4"
+          class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2"
+          onclick="gotoDetail(this.id)"
+        >
+          <div class="card text-center">
+            <img
+              src="../Sources/assets/produk/pd-4.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h6 class="card-title">Kaset Blur: The Best Of</h6>
+              <p class="card-text">
+                Blur: The Best Of is a greatest hits compilation album by
+                English Britpop band Blur, first released in late 2000
+              </p>
+              <p class="card-text">Rp. 220.000</p>
+              <a href="#" class="btn btn-dark d-grid">beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="5"
+          class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2"
+          onclick="gotoDetail(this.id)"
+        >
+          <div class="card text-center">
+            <img
+              src="../Sources/assets/produk/pd-5.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h6 class="card-title">Kaset The Beatles Anthology 2</h6>
+              <p class="card-text">
+                Anthology 2 is a compilation album by the Beatles, released on
+                18 March 1996 by Apple Records as part of The Beatles Anthology
+                series.
+              </p>
+              <p class="card-text">Rp. 80.000</p>
+              <a href="#" class="btn btn-dark d-grid">beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="6"
+          class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2"
+          onclick="gotoDetail(this.id)"
+        >
+          <div class="card text-center">
+            <img
+              src="../Sources/assets/produk/pd-6.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h6 class="card-title">Kaset Weezer Pinkerton</h6>
+              <p class="card-text">
+                Pinkerton is the second studio album by American rock band
+                Weezer, released on September 24
+              </p>
+              <p class="card-text">Rp. 100.000</p>
+              <a href="#" class="btn btn-dark d-grid">beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="7"
+          class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2"
+          onclick="gotoDetail(this.id)"
+        >
+          <div class="card text-center">
+            <img
+              src="../Sources/assets/produk/pd-7.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h6 class="card-title">CD BTS Lights / Boy With Luv</h6>
+              <p class="card-text">Album by BTS</p>
+              <p class="card-text">Rp. 230.000</p>
+              <a href="#" class="btn btn-dark d-grid">beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="8"
+          class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2"
+          onclick="gotoDetail(this.id)"
+        >
+          <div class="card text-center">
+            <img
+              src="../Sources/assets/produk/pd-8.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h6 class="card-title">Kaset Oasis Heathen Chemistry</h6>
+              <p class="card-text">
+                Heathen Chemistry is the fifth studio album by English rock band
+                Oasis.
+              </p>
+              <p class="card-text">Rp. 180.000</p>
+              <a href="#" class="btn btn-dark d-grid">beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="9"
+          class="card-product col-lg-3 col-md-4 col-sm-6 col-6 mt-2"
+          onclick="gotoDetail(this.id)"
+        >
+          <div class="card text-center">
+            <img
+              src="../Sources/assets/produk/pd-9.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h6 class="card-title">CD Nada Surf High/Low</h6>
+              <p class="card-text">
+                High/Low is the debut studio album by alternative rock band Nada
+                Surf, released on June 18, 1996.
+              </p>
+              <p class="card-text">Rp. 200.000</p>
+              <a href="#" class="btn btn-dark d-grid">beli</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Akhir Produk-->
+
+    <!--Awal foooter-->
+    <footer class="bg-light p-5 mt-5">
+      <div class="container">
+        <div class="row mt-2">
+          <div class="col-md-6 text-md-start text-center pt-2 pb-2">
+            <a href="#" class="text-decoration-none">
+              <img
+                src="../Sources/assets/logo.png"
+                style="width: 40px"
+                alt=""
+              />
+            </a>
+            <span class="ps-1"
+              >Copyright @2022 | Created with
+              <i class="fas fa-heart text-danger"></i> by
+              <a
+                href="https://twitter.com/qiiiiisixx"
+                class="text-decoration-none text-dark fw-bold"
+                >qiiiiisixx</a
+              ></span
+            >
+          </div>
+
+          <div class="col-md-6 text-md-end text-center pt-2 pb-2">
+            <a
+              href="https://web.facebook.com/rifqitriginandri?_rdc=1&_rdr"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/facebook.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/rifqitriginandri/"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/instagram.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://mobile.twitter.com/qiiiiisixx"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/twitter.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://id.linkedin.com/in/rifqitriginandri"
+              class="text-decoration-none"
+            >
+              <img
+                class="ms-2"
+                src="../Sources/assets/sosialMedia/linkedin.png"
+                style="width: 32px"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Akhir Footer-->
+
+    <script>
+      function gotoLogin() {
+        window.location.href = "login.html";
+      }
+
+      function gotoDetail(id) {
+        // alert(id);
+        window.location.href = "detail_produk.html";
+        sessionStorage.setItem("id-product", id);
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
